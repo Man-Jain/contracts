@@ -1,0 +1,851 @@
+{
+  "contractName": "ISlashingManager",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "VOTE_TYPE",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "heimdallId",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "jailCheckpoints",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "logger",
+      "outputs": [
+        {
+          "internalType": "contract StakingInfo",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "proposerRate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "registry",
+      "outputs": [
+        {
+          "internalType": "contract Registry",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "reportRate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "slashingNonce",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"VOTE_TYPE\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"heimdallId\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"jailCheckpoints\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"logger\",\"outputs\":[{\"internalType\":\"contract StakingInfo\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"proposerRate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"registry\",\"outputs\":[{\"internalType\":\"contract Registry\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"reportRate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"slashingNonce\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/manjain/Documents/contracts/contracts/staking/slashing/ISlashingManager.sol\":\"ISlashingManager\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/manjain/Documents/contracts/contracts/common/Registry.sol\":{\"keccak256\":\"0x4b1a52c27bc1bfce2e2b6fc39f5aee3e3bc5bc12da46a72c46ae96a54d84b88d\",\"urls\":[\"bzz-raw://3825d6dd42f0e86d1ae5fb511fdaeace7193af7af30cb7f952077611e12a8f84\",\"dweb:/ipfs/QmVLf13m6nvvyMGU5CmGwFERTPXyWKQZUVwatQD5Gmt77k\"]},\"/home/manjain/Documents/contracts/contracts/common/governance/Governable.sol\":{\"keccak256\":\"0x38ecd54850256c7f03fd236d4fd95de3f2e307cb6f3fd843994d588e0f2fbc04\",\"urls\":[\"bzz-raw://5ce3e82b37ad1e5a5475355729bb731434bfc47a1b865c3589f666907b6b0b7b\",\"dweb:/ipfs/QmUMRzD27ab7gEecNwoUdZRMysxik9RduLqyym9nhLvevT\"]},\"/home/manjain/Documents/contracts/contracts/common/governance/IGovernance.sol\":{\"keccak256\":\"0x81b923a9b6ee8ee89a9741b5a74bc1318c5e570e09a66e20e26cb8850d76b367\",\"urls\":[\"bzz-raw://a634cba0419365bbbcb507ba519ea912e96ce0ad1369c736c5059ed3c86441a6\",\"dweb:/ipfs/QmTQSA3KNDo9yiZboXqNDSCSVbUshudqJNLMrXGcnxRJM3\"]},\"/home/manjain/Documents/contracts/contracts/common/lib/BytesLib.sol\":{\"keccak256\":\"0xfab8066886f17875ca203d9df49666528b798a6b6099883a884767862d0b7b55\",\"urls\":[\"bzz-raw://5df28eb907729ccfb33917576652046c4516fdb3b5820e2be76e3fc1cb2e3742\",\"dweb:/ipfs/QmXMzHwoMX57FSXMybH87oq2L2k4TLYd9MVvi89KEac5Nu\"]},\"/home/manjain/Documents/contracts/contracts/common/lib/ECVerify.sol\":{\"keccak256\":\"0xc10958c48f3e89c0f5ae672295584fbf4ad906951cbdb8df81d93d3c0362093f\",\"urls\":[\"bzz-raw://03e89ca872bef29244ebd398206b6ccb7960fbd40c70dedcc73ba9d29fb81e75\",\"dweb:/ipfs/QmYSewryBE8GjEfjcGfsjGTC6aSAvZLaRq6fRzmgP5k1xh\"]},\"/home/manjain/Documents/contracts/contracts/root/withdrawManager/IWithdrawManager.sol\":{\"keccak256\":\"0xcf284a6c5fa2e5f6aa045ae18fe617bab6f4d82dc30dec5682c9d13190529449\",\"urls\":[\"bzz-raw://eac0c653215537db1e97263afeda269485c1daf5671dfa64fa92be205abdf623\",\"dweb:/ipfs/QmaWWvvxSbyAtPjhCMEXM8QACurs7Av8NMNevSuL8wFJaB\"]},\"/home/manjain/Documents/contracts/contracts/staking/StakingInfo.sol\":{\"keccak256\":\"0x72a9f9395e466d5a8dc79e39d12b162732d49126242632d8cc11683c2e79cbed\",\"urls\":[\"bzz-raw://8eee9774229e54e99fc2a1a834420e51027b455daed4baf96d98eeecd7970870\",\"dweb:/ipfs/QmWonm6KwmkPBhzvPA3ibrJHf8rYQEYQF3FxsaoWN7nfmd\"]},\"/home/manjain/Documents/contracts/contracts/staking/slashing/ISlashingManager.sol\":{\"keccak256\":\"0x8330b452df5a9942f3730682f138b1ee7ae3609f726e521f6951bb3dea21ceac\",\"urls\":[\"bzz-raw://3e3d5631273ef289d21b16b43fd9a92cb7d74e54597f6b79b2219a35ab406d66\",\"dweb:/ipfs/Qmc1dKP1QigY59aT9zpekWgVcXMfQfULLU4MYh1YrubPCn\"]},\"openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0xc2a200a877c4a9b2475c246c54ffecc69ffde3e11af83319c63c2dc5458bac80\",\"urls\":[\"bzz-raw://d6ee2095166a8fc1dbaff1949d786b91b8ef8ce41a7b5801a81dd2453220e770\",\"dweb:/ipfs/QmYBLFvCr9zKndkP8e7nFoKuZGcQEQtbHdwttC1MqckCgv\"]},\"openzeppelin-solidity/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0xcb16adc00dcf0d75e0bdf94379f4d5a6d74dca7c74e4183b94e15721159f8a30\",\"urls\":[\"bzz-raw://e7de373f0bd92068fa1173a1bc2f65e80fdc4d929a339796636f65d6ef901005\",\"dweb:/ipfs/Qme26FWF1Ea8f7snvRo1Q3x6JkqHqoWVqYif3qzDGE8JEC\"]}},\"version\":1}",
+  "bytecode": "0x608060405260056001556032600255600560035534801561001f57600080fd5b506101878061002f6000396000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c8063c25593be1161005b578063c25593be146100db578063d5b844eb146100e3578063f24ccbfe14610101578063fbc3dd361461010957610088565b80633199e3051461008d578063556b2ce9146100a75780637b103999146100af578063a2d32176146100d3575b600080fd5b610095610111565b60408051918252519081900360200190f35b610095610117565b6100b761011d565b604080516001600160a01b039092168252519081900360200190f35b61009561012c565b610095610132565b6100eb610138565b6040805160ff9092168252519081900360200190f35b6100b761013d565b61009561014c565b60025481565b60035481565b6005546001600160a01b031681565b60045481565b60015481565b600281565b6006546001600160a01b031681565b6000548156fea265627a7a723158204d6912feccb33ee312e49bd8390fbc815c182fb0832f7e382470611cf8a111e964736f6c63430005110032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100885760003560e01c8063c25593be1161005b578063c25593be146100db578063d5b844eb146100e3578063f24ccbfe14610101578063fbc3dd361461010957610088565b80633199e3051461008d578063556b2ce9146100a75780637b103999146100af578063a2d32176146100d3575b600080fd5b610095610111565b60408051918252519081900360200190f35b610095610117565b6100b761011d565b604080516001600160a01b039092168252519081900360200190f35b61009561012c565b610095610132565b6100eb610138565b6040805160ff9092168252519081900360200190f35b6100b761013d565b61009561014c565b60025481565b60035481565b6005546001600160a01b031681565b60045481565b60015481565b600281565b6006546001600160a01b031681565b6000548156fea265627a7a723158204d6912feccb33ee312e49bd8390fbc815c182fb0832f7e382470611cf8a111e964736f6c63430005110032",
+  "sourceMap": "126:370:77:-;;;258:1;230:29;;318:2;288:32;;382:1;349:34;;126:370;8:9:-1;5:2;;;30:1;27;20:12;5:2;126:370:77;;;;;;;",
+  "deployedSourceMap": "126:370:77:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;126:370:77;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;288:32;;;:::i;:::-;;;;;;;;;;;;;;;;349:34;;;:::i;438:24::-;;;:::i;:::-;;;;-1:-1:-1;;;;;438:24:77;;;;;;;;;;;;;;404:28;;;:::i;230:29::-;;;:::i;189:35::-;;;:::i;:::-;;;;;;;;;;;;;;;;;;;468:25;;;:::i;158:::-;;;:::i;288:32::-;;;;:::o;349:34::-;;;;:::o;438:24::-;;;-1:-1:-1;;;;;438:24:77;;:::o;404:28::-;;;;:::o;230:29::-;;;;:::o;189:35::-;223:1;189:35;:::o;468:25::-;;;-1:-1:-1;;;;;468:25:77;;:::o;158:::-;;;;:::o",
+  "source": "pragma solidity ^0.5.2;\nimport {StakingInfo} from \"../StakingInfo.sol\";\nimport {Registry} from \"../../common/Registry.sol\";\n\n\ncontract ISlashingManager {\n    bytes32 public heimdallId;\n    uint8 public constant VOTE_TYPE = 2;\n    uint256 public reportRate = 5; // dummy default value\n    uint256 public proposerRate = 50; // dummy default value\n    uint256 public jailCheckpoints = 5; // checkpoints\n    uint256 public slashingNonce;\n    Registry public registry;\n    StakingInfo public logger;\n}\n",
+  "sourcePath": "/home/manjain/Documents/contracts/contracts/staking/slashing/ISlashingManager.sol",
+  "ast": {
+    "absolutePath": "/home/manjain/Documents/contracts/contracts/staking/slashing/ISlashingManager.sol",
+    "exportedSymbols": {
+      "ISlashingManager": [
+        17917
+      ]
+    },
+    "id": 17918,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 17892,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:77"
+      },
+      {
+        "absolutePath": "/home/manjain/Documents/contracts/contracts/staking/StakingInfo.sol",
+        "file": "../StakingInfo.sol",
+        "id": 17894,
+        "nodeType": "ImportDirective",
+        "scope": 17918,
+        "sourceUnit": 17891,
+        "src": "24:47:77",
+        "symbolAliases": [
+          {
+            "foreign": 17893,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/manjain/Documents/contracts/contracts/common/Registry.sol",
+        "file": "../../common/Registry.sol",
+        "id": 17896,
+        "nodeType": "ImportDirective",
+        "scope": 17918,
+        "sourceUnit": 2940,
+        "src": "72:51:77",
+        "symbolAliases": [
+          {
+            "foreign": 17895,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 17917,
+        "linearizedBaseContracts": [
+          17917
+        ],
+        "name": "ISlashingManager",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 17898,
+            "name": "heimdallId",
+            "nodeType": "VariableDeclaration",
+            "scope": 17917,
+            "src": "158:25:77",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 17897,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "158:7:77",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 17901,
+            "name": "VOTE_TYPE",
+            "nodeType": "VariableDeclaration",
+            "scope": 17917,
+            "src": "189:35:77",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 17899,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "189:5:77",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "32",
+              "id": 17900,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "223:1:77",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_2_by_1",
+                "typeString": "int_const 2"
+              },
+              "value": "2"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 17904,
+            "name": "reportRate",
+            "nodeType": "VariableDeclaration",
+            "scope": 17917,
+            "src": "230:29:77",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 17902,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "230:7:77",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "35",
+              "id": 17903,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "258:1:77",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_5_by_1",
+                "typeString": "int_const 5"
+              },
+              "value": "5"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 17907,
+            "name": "proposerRate",
+            "nodeType": "VariableDeclaration",
+            "scope": 17917,
+            "src": "288:32:77",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 17905,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "288:7:77",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "3530",
+              "id": 17906,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "318:2:77",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_50_by_1",
+                "typeString": "int_const 50"
+              },
+              "value": "50"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 17910,
+            "name": "jailCheckpoints",
+            "nodeType": "VariableDeclaration",
+            "scope": 17917,
+            "src": "349:34:77",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 17908,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "349:7:77",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "35",
+              "id": 17909,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "382:1:77",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_5_by_1",
+                "typeString": "int_const 5"
+              },
+              "value": "5"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 17912,
+            "name": "slashingNonce",
+            "nodeType": "VariableDeclaration",
+            "scope": 17917,
+            "src": "404:28:77",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 17911,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "404:7:77",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 17914,
+            "name": "registry",
+            "nodeType": "VariableDeclaration",
+            "scope": 17917,
+            "src": "438:24:77",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Registry_$2939",
+              "typeString": "contract Registry"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 17913,
+              "name": "Registry",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2939,
+              "src": "438:8:77",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Registry_$2939",
+                "typeString": "contract Registry"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 17916,
+            "name": "logger",
+            "nodeType": "VariableDeclaration",
+            "scope": 17917,
+            "src": "468:25:77",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_StakingInfo_$17890",
+              "typeString": "contract StakingInfo"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 17915,
+              "name": "StakingInfo",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 17890,
+              "src": "468:11:77",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_StakingInfo_$17890",
+                "typeString": "contract StakingInfo"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 17918,
+        "src": "126:370:77"
+      }
+    ],
+    "src": "0:497:77"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/manjain/Documents/contracts/contracts/staking/slashing/ISlashingManager.sol",
+    "exportedSymbols": {
+      "ISlashingManager": [
+        17917
+      ]
+    },
+    "id": 17918,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 17892,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:77"
+      },
+      {
+        "absolutePath": "/home/manjain/Documents/contracts/contracts/staking/StakingInfo.sol",
+        "file": "../StakingInfo.sol",
+        "id": 17894,
+        "nodeType": "ImportDirective",
+        "scope": 17918,
+        "sourceUnit": 17891,
+        "src": "24:47:77",
+        "symbolAliases": [
+          {
+            "foreign": 17893,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/manjain/Documents/contracts/contracts/common/Registry.sol",
+        "file": "../../common/Registry.sol",
+        "id": 17896,
+        "nodeType": "ImportDirective",
+        "scope": 17918,
+        "sourceUnit": 2940,
+        "src": "72:51:77",
+        "symbolAliases": [
+          {
+            "foreign": 17895,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 17917,
+        "linearizedBaseContracts": [
+          17917
+        ],
+        "name": "ISlashingManager",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 17898,
+            "name": "heimdallId",
+            "nodeType": "VariableDeclaration",
+            "scope": 17917,
+            "src": "158:25:77",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 17897,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "158:7:77",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 17901,
+            "name": "VOTE_TYPE",
+            "nodeType": "VariableDeclaration",
+            "scope": 17917,
+            "src": "189:35:77",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 17899,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "189:5:77",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "32",
+              "id": 17900,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "223:1:77",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_2_by_1",
+                "typeString": "int_const 2"
+              },
+              "value": "2"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 17904,
+            "name": "reportRate",
+            "nodeType": "VariableDeclaration",
+            "scope": 17917,
+            "src": "230:29:77",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 17902,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "230:7:77",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "35",
+              "id": 17903,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "258:1:77",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_5_by_1",
+                "typeString": "int_const 5"
+              },
+              "value": "5"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 17907,
+            "name": "proposerRate",
+            "nodeType": "VariableDeclaration",
+            "scope": 17917,
+            "src": "288:32:77",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 17905,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "288:7:77",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "3530",
+              "id": 17906,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "318:2:77",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_50_by_1",
+                "typeString": "int_const 50"
+              },
+              "value": "50"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 17910,
+            "name": "jailCheckpoints",
+            "nodeType": "VariableDeclaration",
+            "scope": 17917,
+            "src": "349:34:77",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 17908,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "349:7:77",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "35",
+              "id": 17909,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "382:1:77",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_5_by_1",
+                "typeString": "int_const 5"
+              },
+              "value": "5"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 17912,
+            "name": "slashingNonce",
+            "nodeType": "VariableDeclaration",
+            "scope": 17917,
+            "src": "404:28:77",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 17911,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "404:7:77",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 17914,
+            "name": "registry",
+            "nodeType": "VariableDeclaration",
+            "scope": 17917,
+            "src": "438:24:77",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Registry_$2939",
+              "typeString": "contract Registry"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 17913,
+              "name": "Registry",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2939,
+              "src": "438:8:77",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Registry_$2939",
+                "typeString": "contract Registry"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 17916,
+            "name": "logger",
+            "nodeType": "VariableDeclaration",
+            "scope": 17917,
+            "src": "468:25:77",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_StakingInfo_$17890",
+              "typeString": "contract StakingInfo"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 17915,
+              "name": "StakingInfo",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 17890,
+              "src": "468:11:77",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_StakingInfo_$17890",
+                "typeString": "contract StakingInfo"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 17918,
+        "src": "126:370:77"
+      }
+    ],
+    "src": "0:497:77"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Linux.g++"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.14",
+  "updatedAt": "2021-02-21T12:11:06.894Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
