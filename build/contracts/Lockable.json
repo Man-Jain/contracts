@@ -1,0 +1,997 @@
+{
+  "contractName": "Lockable",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "locked",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "lock",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "unlock",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"lock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"locked\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"unlock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/manjain/Documents/contracts/contracts/common/mixin/Lockable.sol\":\"Lockable\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/manjain/Documents/contracts/contracts/common/mixin/Lockable.sol\":{\"keccak256\":\"0x59d2acf07b49a615d1bb5be488fdbc819a4b31c318a99800802455fc8ea1d562\",\"urls\":[\"bzz-raw://165e0ff5c1cb060ec4ffc7f2e352d38402959ecab77de2de1e39d6a637058220\",\"dweb:/ipfs/QmXtFFpKq5VBLwmfabs9oBiH56aTmWQzJqRWmyJnmbi5cT\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060c28061001f6000396000f3fe6080604052348015600f57600080fd5b5060043610603c5760003560e01c8063a69df4b5146041578063cf309012146049578063f83d08ba146063575b600080fd5b60476069565b005b604f6075565b604080519115158252519081900360200190f35b6047607e565b6000805460ff19169055565b60005460ff1681565b6000805460ff1916600117905556fea265627a7a723158204d9ffba506bae96fbaf69d77a7a5ca076db28fa44d86b10afcd5054c74d99ffa64736f6c63430005110032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b5060043610603c5760003560e01c8063a69df4b5146041578063cf309012146049578063f83d08ba146063575b600080fd5b60476069565b005b604f6075565b604080519115158252519081900360200190f35b6047607e565b6000805460ff19169055565b60005460ff1681565b6000805460ff1916600117905556fea265627a7a723158204d9ffba506bae96fbaf69d77a7a5ca076db28fa44d86b10afcd5054c74d99ffa64736f6c63430005110032",
+  "sourceMap": "25:334:45:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:334:45;;;;;;;",
+  "deployedSourceMap": "25:334:45:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:334:45;;;;;;;;;;;;;;;;;;;;;;;;;;;;;301:56;;;:::i;:::-;;49:18;;;:::i;:::-;;;;;;;;;;;;;;;;;;242:53;;;:::i;301:56::-;345:5;336:14;;-1:-1:-1;;336:14:45;;;301:56::o;49:18::-;;;;;;:::o;242:53::-;275:6;:13;;-1:-1:-1;;275:13:45;284:4;275:13;;;242:53::o",
+  "source": "pragma solidity ^0.5.2;\n\ncontract Lockable {\n    bool public locked;\n\n    modifier onlyWhenUnlocked() {\n        _assertUnlocked();\n        _;\n    }\n\n    function _assertUnlocked() private view {\n        require(!locked, \"locked\");\n    }\n\n    function lock() public {\n        locked = true;\n    }\n\n    function unlock() public {\n        locked = false;\n    }\n}\n",
+  "sourcePath": "/home/manjain/Documents/contracts/contracts/common/mixin/Lockable.sol",
+  "ast": {
+    "absolutePath": "/home/manjain/Documents/contracts/contracts/common/mixin/Lockable.sol",
+    "exportedSymbols": {
+      "Lockable": [
+        7784
+      ]
+    },
+    "id": 7785,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7748,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:45"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7784,
+        "linearizedBaseContracts": [
+          7784
+        ],
+        "name": "Lockable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 7750,
+            "name": "locked",
+            "nodeType": "VariableDeclaration",
+            "scope": 7784,
+            "src": "49:18:45",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 7749,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "49:4:45",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7756,
+              "nodeType": "Block",
+              "src": "102:45:45",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 7752,
+                      "name": "_assertUnlocked",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7767,
+                      "src": "112:15:45",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$__$",
+                        "typeString": "function () view"
+                      }
+                    },
+                    "id": 7753,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "112:17:45",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7754,
+                  "nodeType": "ExpressionStatement",
+                  "src": "112:17:45"
+                },
+                {
+                  "id": 7755,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "139:1:45"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7757,
+            "name": "onlyWhenUnlocked",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 7751,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "99:2:45"
+            },
+            "src": "74:73:45",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 7766,
+              "nodeType": "Block",
+              "src": "193:43:45",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 7762,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "!",
+                        "prefix": true,
+                        "src": "211:7:45",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "id": 7761,
+                          "name": "locked",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 7750,
+                          "src": "212:6:45",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "6c6f636b6564",
+                        "id": 7763,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "220:8:45",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_ab99c6d7581cbb37d2e578d3097bfdd3323e05447f1fd7670b6c3a3fb9d9ff79",
+                          "typeString": "literal_string \"locked\""
+                        },
+                        "value": "locked"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_ab99c6d7581cbb37d2e578d3097bfdd3323e05447f1fd7670b6c3a3fb9d9ff79",
+                          "typeString": "literal_string \"locked\""
+                        }
+                      ],
+                      "id": 7760,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        29043,
+                        29044
+                      ],
+                      "referencedDeclaration": 29044,
+                      "src": "203:7:45",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 7764,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "203:26:45",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7765,
+                  "nodeType": "ExpressionStatement",
+                  "src": "203:26:45"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7767,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_assertUnlocked",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7758,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "177:2:45"
+            },
+            "returnParameters": {
+              "id": 7759,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "193:0:45"
+            },
+            "scope": 7784,
+            "src": "153:83:45",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 7774,
+              "nodeType": "Block",
+              "src": "265:30:45",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7772,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7770,
+                      "name": "locked",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7750,
+                      "src": "275:6:45",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 7771,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "284:4:45",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "275:13:45",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 7773,
+                  "nodeType": "ExpressionStatement",
+                  "src": "275:13:45"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7775,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "lock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7768,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "255:2:45"
+            },
+            "returnParameters": {
+              "id": 7769,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "265:0:45"
+            },
+            "scope": 7784,
+            "src": "242:53:45",
+            "stateMutability": "nonpayable",
+            "superFunction": 23863,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7782,
+              "nodeType": "Block",
+              "src": "326:31:45",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7780,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7778,
+                      "name": "locked",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7750,
+                      "src": "336:6:45",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "66616c7365",
+                      "id": 7779,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "345:5:45",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "336:14:45",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 7781,
+                  "nodeType": "ExpressionStatement",
+                  "src": "336:14:45"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7783,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "unlock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7776,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "316:2:45"
+            },
+            "returnParameters": {
+              "id": 7777,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "326:0:45"
+            },
+            "scope": 7784,
+            "src": "301:56:45",
+            "stateMutability": "nonpayable",
+            "superFunction": 23860,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7785,
+        "src": "25:334:45"
+      }
+    ],
+    "src": "0:360:45"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/manjain/Documents/contracts/contracts/common/mixin/Lockable.sol",
+      "exportedSymbols": {
+        "Lockable": [
+          7784
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".2"
+          ]
+        },
+        "id": 7748,
+        "name": "PragmaDirective",
+        "src": "0:23:45"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            7784
+          ],
+          "name": "Lockable",
+          "scope": 7785
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "locked",
+              "scope": 7784,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "bool",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "bool",
+                  "type": "bool"
+                },
+                "id": 7749,
+                "name": "ElementaryTypeName",
+                "src": "49:4:45"
+              }
+            ],
+            "id": 7750,
+            "name": "VariableDeclaration",
+            "src": "49:18:45"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "name": "onlyWhenUnlocked",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7751,
+                "name": "ParameterList",
+                "src": "99:2:45"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 7767,
+                              "type": "function () view",
+                              "value": "_assertUnlocked"
+                            },
+                            "id": 7752,
+                            "name": "Identifier",
+                            "src": "112:15:45"
+                          }
+                        ],
+                        "id": 7753,
+                        "name": "FunctionCall",
+                        "src": "112:17:45"
+                      }
+                    ],
+                    "id": 7754,
+                    "name": "ExpressionStatement",
+                    "src": "112:17:45"
+                  },
+                  {
+                    "id": 7755,
+                    "name": "PlaceholderStatement",
+                    "src": "139:1:45"
+                  }
+                ],
+                "id": 7756,
+                "name": "Block",
+                "src": "102:45:45"
+              }
+            ],
+            "id": 7757,
+            "name": "ModifierDefinition",
+            "src": "74:73:45"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "_assertUnlocked",
+              "scope": 7784,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7758,
+                "name": "ParameterList",
+                "src": "177:2:45"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7759,
+                "name": "ParameterList",
+                "src": "193:0:45"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_ab99c6d7581cbb37d2e578d3097bfdd3323e05447f1fd7670b6c3a3fb9d9ff79",
+                                  "typeString": "literal_string \"locked\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                29043,
+                                29044
+                              ],
+                              "referencedDeclaration": 29044,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 7760,
+                            "name": "Identifier",
+                            "src": "203:7:45"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "!",
+                              "prefix": true,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 7750,
+                                  "type": "bool",
+                                  "value": "locked"
+                                },
+                                "id": 7761,
+                                "name": "Identifier",
+                                "src": "212:6:45"
+                              }
+                            ],
+                            "id": 7762,
+                            "name": "UnaryOperation",
+                            "src": "211:7:45"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "6c6f636b6564",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"locked\"",
+                              "value": "locked"
+                            },
+                            "id": 7763,
+                            "name": "Literal",
+                            "src": "220:8:45"
+                          }
+                        ],
+                        "id": 7764,
+                        "name": "FunctionCall",
+                        "src": "203:26:45"
+                      }
+                    ],
+                    "id": 7765,
+                    "name": "ExpressionStatement",
+                    "src": "203:26:45"
+                  }
+                ],
+                "id": 7766,
+                "name": "Block",
+                "src": "193:43:45"
+              }
+            ],
+            "id": 7767,
+            "name": "FunctionDefinition",
+            "src": "153:83:45"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "lock",
+              "scope": 7784,
+              "stateMutability": "nonpayable",
+              "superFunction": 23863,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7768,
+                "name": "ParameterList",
+                "src": "255:2:45"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7769,
+                "name": "ParameterList",
+                "src": "265:0:45"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 7750,
+                              "type": "bool",
+                              "value": "locked"
+                            },
+                            "id": 7770,
+                            "name": "Identifier",
+                            "src": "275:6:45"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "74727565",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "true"
+                            },
+                            "id": 7771,
+                            "name": "Literal",
+                            "src": "284:4:45"
+                          }
+                        ],
+                        "id": 7772,
+                        "name": "Assignment",
+                        "src": "275:13:45"
+                      }
+                    ],
+                    "id": 7773,
+                    "name": "ExpressionStatement",
+                    "src": "275:13:45"
+                  }
+                ],
+                "id": 7774,
+                "name": "Block",
+                "src": "265:30:45"
+              }
+            ],
+            "id": 7775,
+            "name": "FunctionDefinition",
+            "src": "242:53:45"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "unlock",
+              "scope": 7784,
+              "stateMutability": "nonpayable",
+              "superFunction": 23860,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7776,
+                "name": "ParameterList",
+                "src": "316:2:45"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7777,
+                "name": "ParameterList",
+                "src": "326:0:45"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 7750,
+                              "type": "bool",
+                              "value": "locked"
+                            },
+                            "id": 7778,
+                            "name": "Identifier",
+                            "src": "336:6:45"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "66616c7365",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "false"
+                            },
+                            "id": 7779,
+                            "name": "Literal",
+                            "src": "345:5:45"
+                          }
+                        ],
+                        "id": 7780,
+                        "name": "Assignment",
+                        "src": "336:14:45"
+                      }
+                    ],
+                    "id": 7781,
+                    "name": "ExpressionStatement",
+                    "src": "336:14:45"
+                  }
+                ],
+                "id": 7782,
+                "name": "Block",
+                "src": "326:31:45"
+              }
+            ],
+            "id": 7783,
+            "name": "FunctionDefinition",
+            "src": "301:56:45"
+          }
+        ],
+        "id": 7784,
+        "name": "ContractDefinition",
+        "src": "25:334:45"
+      }
+    ],
+    "id": 7785,
+    "name": "SourceUnit",
+    "src": "0:360:45"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Linux.g++"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-03-21T20:14:30.890Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

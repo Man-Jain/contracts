@@ -1,0 +1,838 @@
+{
+  "contractName": "IDepositManager",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "depositEther",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amountOrNFTId",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferAssets",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "depositERC20",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "depositERC721",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"depositERC20\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"depositERC721\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"depositEther\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amountOrNFTId\",\"type\":\"uint256\"}],\"name\":\"transferAssets\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/manjain/Documents/contracts/contracts/root/depositManager/IDepositManager.sol\":\"IDepositManager\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/manjain/Documents/contracts/contracts/root/depositManager/IDepositManager.sol\":{\"keccak256\":\"0x037335916a6f7dc7f627e1fcf7c677a9d63fb90b80f09f43ffdbe33c4bb84fa8\",\"urls\":[\"bzz-raw://c2ea5987f47a5a40f84e74b9fd4b86b04fd70539ae24c8f31f09a1a8563587cf\",\"dweb:/ipfs/QmPVr5myefXZi4jgtjExJoCpL4MHMYXo7UBhkv8AtMWkB8\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.5.2;\n\ninterface IDepositManager {\n    function depositEther() external payable;\n    function transferAssets(\n        address _token,\n        address _user,\n        uint256 _amountOrNFTId\n    ) external;\n    function depositERC20(address _token, uint256 _amount) external;\n    function depositERC721(address _token, uint256 _tokenId) external;\n}\n",
+  "sourcePath": "/home/manjain/Documents/contracts/contracts/root/depositManager/IDepositManager.sol",
+  "ast": {
+    "absolutePath": "/home/manjain/Documents/contracts/contracts/root/depositManager/IDepositManager.sol",
+    "exportedSymbols": {
+      "IDepositManager": [
+        9364
+      ]
+    },
+    "id": 9365,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 9337,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:62"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 9364,
+        "linearizedBaseContracts": [
+          9364
+        ],
+        "name": "IDepositManager",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 9340,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "depositEther",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9338,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "78:2:62"
+            },
+            "returnParameters": {
+              "id": 9339,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "97:0:62"
+            },
+            "scope": 9364,
+            "src": "57:41:62",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 9349,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferAssets",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9347,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9342,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9349,
+                  "src": "136:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9341,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "136:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9344,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9349,
+                  "src": "160:13:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9343,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "160:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9346,
+                  "name": "_amountOrNFTId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9349,
+                  "src": "183:22:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9345,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "183:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "126:85:62"
+            },
+            "returnParameters": {
+              "id": 9348,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "220:0:62"
+            },
+            "scope": 9364,
+            "src": "103:118:62",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 9356,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "depositERC20",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9354,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9351,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9356,
+                  "src": "248:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9350,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "248:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9353,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9356,
+                  "src": "264:15:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9352,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "264:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "247:33:62"
+            },
+            "returnParameters": {
+              "id": 9355,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "289:0:62"
+            },
+            "scope": 9364,
+            "src": "226:64:62",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 9363,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "depositERC721",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9361,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9358,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9363,
+                  "src": "318:14:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9357,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "318:7:62",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9360,
+                  "name": "_tokenId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9363,
+                  "src": "334:16:62",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9359,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "334:7:62",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "317:34:62"
+            },
+            "returnParameters": {
+              "id": 9362,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "360:0:62"
+            },
+            "scope": 9364,
+            "src": "295:66:62",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 9365,
+        "src": "25:338:62"
+      }
+    ],
+    "src": "0:364:62"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/manjain/Documents/contracts/contracts/root/depositManager/IDepositManager.sol",
+      "exportedSymbols": {
+        "IDepositManager": [
+          9364
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".2"
+          ]
+        },
+        "id": 9337,
+        "name": "PragmaDirective",
+        "src": "0:23:62"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            9364
+          ],
+          "name": "IDepositManager",
+          "scope": 9365
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "depositEther",
+              "scope": 9364,
+              "stateMutability": "payable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 9338,
+                "name": "ParameterList",
+                "src": "78:2:62"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 9339,
+                "name": "ParameterList",
+                "src": "97:0:62"
+              }
+            ],
+            "id": 9340,
+            "name": "FunctionDefinition",
+            "src": "57:41:62"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "transferAssets",
+              "scope": 9364,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_token",
+                      "scope": 9349,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 9341,
+                        "name": "ElementaryTypeName",
+                        "src": "136:7:62"
+                      }
+                    ],
+                    "id": 9342,
+                    "name": "VariableDeclaration",
+                    "src": "136:14:62"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_user",
+                      "scope": 9349,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 9343,
+                        "name": "ElementaryTypeName",
+                        "src": "160:7:62"
+                      }
+                    ],
+                    "id": 9344,
+                    "name": "VariableDeclaration",
+                    "src": "160:13:62"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_amountOrNFTId",
+                      "scope": 9349,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 9345,
+                        "name": "ElementaryTypeName",
+                        "src": "183:7:62"
+                      }
+                    ],
+                    "id": 9346,
+                    "name": "VariableDeclaration",
+                    "src": "183:22:62"
+                  }
+                ],
+                "id": 9347,
+                "name": "ParameterList",
+                "src": "126:85:62"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 9348,
+                "name": "ParameterList",
+                "src": "220:0:62"
+              }
+            ],
+            "id": 9349,
+            "name": "FunctionDefinition",
+            "src": "103:118:62"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "depositERC20",
+              "scope": 9364,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_token",
+                      "scope": 9356,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 9350,
+                        "name": "ElementaryTypeName",
+                        "src": "248:7:62"
+                      }
+                    ],
+                    "id": 9351,
+                    "name": "VariableDeclaration",
+                    "src": "248:14:62"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_amount",
+                      "scope": 9356,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 9352,
+                        "name": "ElementaryTypeName",
+                        "src": "264:7:62"
+                      }
+                    ],
+                    "id": 9353,
+                    "name": "VariableDeclaration",
+                    "src": "264:15:62"
+                  }
+                ],
+                "id": 9354,
+                "name": "ParameterList",
+                "src": "247:33:62"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 9355,
+                "name": "ParameterList",
+                "src": "289:0:62"
+              }
+            ],
+            "id": 9356,
+            "name": "FunctionDefinition",
+            "src": "226:64:62"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "depositERC721",
+              "scope": 9364,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_token",
+                      "scope": 9363,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 9357,
+                        "name": "ElementaryTypeName",
+                        "src": "318:7:62"
+                      }
+                    ],
+                    "id": 9358,
+                    "name": "VariableDeclaration",
+                    "src": "318:14:62"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_tokenId",
+                      "scope": 9363,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 9359,
+                        "name": "ElementaryTypeName",
+                        "src": "334:7:62"
+                      }
+                    ],
+                    "id": 9360,
+                    "name": "VariableDeclaration",
+                    "src": "334:16:62"
+                  }
+                ],
+                "id": 9361,
+                "name": "ParameterList",
+                "src": "317:34:62"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 9362,
+                "name": "ParameterList",
+                "src": "360:0:62"
+              }
+            ],
+            "id": 9363,
+            "name": "FunctionDefinition",
+            "src": "295:66:62"
+          }
+        ],
+        "id": 9364,
+        "name": "ContractDefinition",
+        "src": "25:338:62"
+      }
+    ],
+    "id": 9365,
+    "name": "SourceUnit",
+    "src": "0:364:62"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Linux.g++"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-03-21T20:14:30.917Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
